@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript image dropdown - basic</title>
+
+<script src="../js/jquery/jquery-1.9.0.min.js"></script>
+<!-- <msdropdown> -->
+<link rel="stylesheet" type="text/css" href="../css/msdropdown/dd.css" />
+<script src="../js/msdropdown/jquery.dd.min.js"></script>
+<!-- </msdropdown> -->
+</head>
+<body>
+
+
+
+    <select id="payments" name="payments" style="width:250px;">
+        <option value="" data-description="Choos your payment gateway">Payment Gateway</option>
+        <option value="amex" data-image="../images/msdropdown/icons/Amex-56.png" data-description="My life. My card...">Amex</option>
+        <option value="Discover" data-image="../images/msdropdown/icons/Discover-56.png" data-description="It pays to Discover...">Discover</option>
+        <option value="Mastercard" data-image="../images/msdropdown/icons/Mastercard-56.png" data-title="For everything else..." data-description="For everything else...">Mastercard</option>
+        <option value="cash" data-image="../images/msdropdown/icons/Cash-56.png" data-description="Sorry not available..." disabled="true">Cash on devlivery</option>
+        <option value="Visa" data-image="../images/msdropdown/icons/Visa-56.png" data-description="All you need...">Visa</option>
+        <option value="Paypal" data-image="../images/msdropdown/icons/Paypal-56.png" data-description="Pay and get paid...">Paypal</option>
+    </select> &nbsp;
+	
+
+
+
+<script>
+//var tc;
+$(document).ready(function(e) {
+	$("#payments").msDropdown({visibleRows:10,animStyle:'slideDown'});
+	//$("#tech").msDropdown().data("dd");//{animStyle:'none'} /{animStyle:'slideDown'} {animStyle:'show'}		
+	//no use
+	/*try {
+		var pages = $("#pages").msDropdown({on:{change:function(data, ui) {
+												var val = data.value;
+												if(val!="")
+													window.location = val;
+											}}}).data("dd");
+
+		var pagename = document.location.pathname.toString();
+		pagename = pagename.split("/");
+		pages.setIndexByValue(pagename[pagename.length-1]);
+		$("#ver").html(msBeautify.version.msDropdown);
+	} catch(e) {
+		//console.log(e);	
+	}
+	
+	$("#ver").html(msBeautify.version.msDropdown);*/
+});
+
+</script>
+
+</body>
+</html>
